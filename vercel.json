@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/thiep/:slug",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/admin.html"
+    }
+  ]
+}

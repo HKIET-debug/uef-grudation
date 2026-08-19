@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - UEF Graduation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/admin.css">
+</head>
+
+<body>
+
+<!-- =========================
+     LOGIN
+========================= -->
+<div id="loginPage" class="login-page">
+    <div class="login-box">
+        <div class="login-logo">UEF</div>
+        <h1>Graduation Admin</h1>
+        <p>Nguyễn Thu Hà</p>
+
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Mật khẩu" required>
+            <button type="submit">ĐĂNG NHẬP</button>
+        </form>
+
+        <div id="loginError" class="error"></div>
+    </div>
+</div>
+
+<!-- =========================
+     ADMIN
+========================= -->
+<div id="adminPage" class="admin-page hidden">
+
+<header>
+    <div>
+        <div class="brand">UEF GRADUATION</div>
+        <div class="subtitle">Nguyễn Thu Hà</div>
+    </div>
+    <button id="logoutBtn" class="logout">ĐĂNG XUẤT</button>
+</header>
+
+<main>
+    <!-- STATISTICS -->
+    <section class="stats">
+        <div class="stat-card">
+            <span>TỔNG KHÁCH</span>
+            <strong id="totalGuests">0</strong>
+        </div>
+        <div class="stat-card attend">
+            <span>SẼ THAM DỰ</span>
+            <strong id="attendingGuests">0</strong>
+        </div>
+        <div class="stat-card absent">
+            <span>KHÔNG ĐI</span>
+            <strong id="absentGuests">0</strong>
+        </div>
+        <div class="stat-card pending">
+            <span>CHƯA PHẢN HỒI</span>
+            <strong id="pendingGuests">0</strong>
+        </div>
+    </section>
+
+    <!-- TOTAL PEOPLE -->
+    <section class="total-people">
+        <span>TỔNG SỐ NGƯỜI THAM DỰ</span>
+        <strong id="totalPeople">0</strong>
+        <span>người</span>
+    </section>
+
+    <!-- TOOLBAR -->
+    <section class="toolbar">
+        <input type="text" id="searchInput" placeholder="Tìm tên người được mời...">
+        <select id="statusFilter">
+            <option value="all">Tất cả</option>
+            <option value="attending">Sẽ tham dự</option>
+            <option value="absent">Không tham dự</option>
+            <option value="pending">Chưa phản hồi</option>
+        </select>
+        <button id="refreshBtn">↻ CẬP NHẬT</button>
+    </section>
+
+    <!-- TABLE -->
+    <section class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>NGƯỜI ĐƯỢC MỜI</th>
+                    <th>TRẠNG THÁI</th>
+                    <th>SỐ NGƯỜI</th>
+                    <th>LỜI NHẮN</th>
+                    <th>CẬP NHẬT</th>
+                </tr>
+            </thead>
+            <tbody id="guestTable"></tbody>
+        </table>
+    </section>
+</main>
+
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase.js"></script>
+<!-- Đã thêm nạp guests.js trước admin.js -->
+<script src="/guests.js"></script>
+<script src="/admin.js"></script>
+
+</body>
+</html>
