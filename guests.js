@@ -21,37 +21,88 @@
   Có thể dùng chữ không dấu, viết thường, nối bằng dấu "-".
 */
 const GUESTS = {
-
+    "bo": {
+        name: "Bố"
+    },
+    "me": {
+        name: "Mẹ"
+    },
+    "teo": {
+        name: "Tèo"
+    },
+    "khang": {
+        name: "Khang"
+    },
     "quoc-anh": {
         name: "Em Quốc Anh"
     },
-
     "tuan-khanh": {
         name: "Em Tuấn Khanh"
     },
-
-    "phuong-anh": {
-        name: "Em Phương Anh"
+    "tuan-anh": {
+        name: "Bạn Tuấn Anh"
     },
-
+    "bao-thien": {
+        name: "Bạn Bảo Thiên"
+    },
+    "hau-ng": {
+        name: "Bạn Hậu Nguyễn"
+    },
+    "chi-hoe": {
+        name: "Chị Hoè"
+    },
     "chi-ha": {
         name: "Chị Hà"
     },
-
-    "hoang-long": {
-        name: "Hoàng Long"
+    "bao-ngoc": {
+        name: "Bảo Ngọc"
     },
-
-    "minh-nguyen": {
-        name: "Minh Nguyen"
+    "ban-hung": {
+        name: "Bạn Hùng"
     },
-
+    "ban-van": {
+        name: "Bạn Vân"
+    },
+    "anh-dam": {
+        name: "Anh Đảm"
+    },
+    "xuan-duong": {
+        name: "Bạn Xuân Dương"
+    },
+    "tram-nguyen": {
+        name: "Trâm Nguyễn"
+    },
     "le-bao": {
         name: "Lê Bảo"
     },
-
-    "van-khanh": {
+    "anh-kim": {
+        name: "Anh Kim"
+    },
+    "phuong-anh": {
         name: "Em Phương Anh"
     },
-
+    "quynh-chi": {
+        name: "Chị Quỳnh Chi"
+    },
+    "van-khanh": {
+        name: "Chị Vân Khánh"
+    },
+    "chi-mai": {
+        name: "Chị Mai"
+    },
+    "hoang-long": {
+        name: "Bạn Hoàng Long"
+    },
+    "minh-nguyen": {
+        name: "Bạn Minh Nguyen"
+    },
+    "anh-dai": {
+        name: "Anh Đại"
+    },
+    "chi-mai": {
+        name: "Chị Mai"
+    },
+    "gia-hoang": {
+        name: "Bạn Gia Hoàng"
+    }
 };
