@@ -266,22 +266,17 @@ celebrationImage.addEventListener("animationend", (event) => {
 */
 
 function getCurrentGuestSlug() {
+    // 1. Kiểm tra dạng đường dẫn /thiep/<slug>
+    const path = decodeURIComponent(window.location.pathname).replace(/^\/+|\/+$/g, "");
+    const parts = path.split("/").filter(Boolean);
 
-    const path =
-        decodeURIComponent(window.location.pathname)
-        .replace(/^\/+|\/+$/g, "");
-
-    const parts =
-        path.split("/").filter(Boolean);
-
-    if (
-        parts.length >= 2 &&
-        parts[0].toLowerCase() === "thiep"
-    ) {
+    if (parts.length >= 2 && parts[0].toLowerCase() === "thiep") {
         return parts[1];
     }
 
-    return "";
+    // 2. Nếu không phải dạng /thiep/, đọc từ tham số ?guest=<slug> trên URL
+    const params = new URLSearchParams(window.location.search);
+    return params.get("guest") || "";
 }
 
 

@@ -99,9 +99,6 @@ const GUESTS = {
     "anh-dai": {
         name: "Anh Đại"
     },
-    "chi-mai": {
-        name: "Chị Mai"
-    },
     "gia-hoang": {
         name: "Bạn Gia Hoàng"
     }
