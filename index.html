@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#8a1730">
   <meta name="description" content="Thiệp mời lễ tốt nghiệp UEF - Nguyễn Thu Hà">
+  <meta property="og:title" content="Thiệp mời tốt nghiệp - Nguyễn Thu Hà">
+  <meta property="og:description" content="Thân mời bạn đến chung vui trong ngày tốt nghiệp của Nguyễn Thu Hà.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <title>Thiệp mời tốt nghiệp - Nguyễn Thu Hà</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +32,7 @@
   <main id="invitation" class="invitation hidden">
     <section class="hero">
       <div class="hero-overlay"></div>
-      <img id="heroImage" class="hero-image" src="/assets/hero.jpg" alt="Thiệp tốt nghiệp UEF">
+      <img id="heroImage" class="hero-image" src="/assets/hero.jpg" alt="Thiệp tốt nghiệp UEF" fetchpriority="high">
       <div class="hero-content">
         <div class="small-label" id="university">UEF</div>
         <h1>GRADUATION</h1>
@@ -61,7 +66,7 @@
         <!-- Cột bên trái: Ảnh mainPhoto -->
         <div class="event-photo-col">
           <div class="photo-frame">
-            <img id="mainPhoto" src="/assets/main-photo.jpg" alt="Nguyễn Thu Hà">
+            <img id="mainPhoto" src="/assets/main-photo.jpg" alt="Nguyễn Thu Hà" loading="lazy" decoding="async">
           </div>
           <p class="photo-caption">Dream · Believe · Achieve</p>
         </div>
@@ -111,7 +116,7 @@
         <span class="floating-heart floating-heart-four" aria-hidden="true">♥</span>
         <span class="floating-heart floating-heart-five" aria-hidden="true">♥</span>
         <span class="floating-heart floating-heart-six" aria-hidden="true">♥</span>
-        <img src="/assets/heart.png" alt="Hà vui mừng khi bạn tham dự">
+        <img src="/assets/heart.png" alt="Hà vui mừng khi bạn tham dự" loading="lazy" decoding="async">
       </div>
 
       <form id="rsvpForm">

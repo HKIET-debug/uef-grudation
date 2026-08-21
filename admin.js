@@ -344,8 +344,24 @@ function renderTable() {
         statusFilter.value;
 
 
+    const responseSlugs = new Set(
+        responses.map(row => row.guest_slug)
+    );
+
+    const pendingRows =
+        (typeof GUESTS !== "undefined" ? Object.entries(GUESTS) : [])
+            .filter(([slug]) => !responseSlugs.has(slug))
+            .map(([guest_slug, guest]) => ({
+                guest_slug,
+                guest_name: guest.name,
+                will_attend: null,
+                guest_count: 0,
+                note: "—",
+                updated_at: null
+            }));
+
     let filtered =
-        [...responses];
+        filter === "pending" ? pendingRows : [...responses];
 
 
     /*
@@ -391,24 +407,6 @@ function renderTable() {
     }
 
 
-    if (filter === "pending") {
-
-        /*
-            Pending không có trong
-            responses.
-
-            Vì vậy phần này sẽ
-            hiển thị empty.
-
-            Ta sẽ nâng cấp sau để
-            hiển thị cả khách chưa RSVP.
-        */
-
-        filtered = [];
-
-    }
-
-
     /*
         Không có dữ liệu
     */
@@ -442,7 +440,12 @@ function renderTable() {
                     let statusClass = "";
 
 
-                    if (row.will_attend) {
+                    if (row.will_attend === null) {
+
+                        status = "○ Chưa phản hồi";
+                        statusClass = "pending";
+
+                    } else if (row.will_attend) {
 
                         status =
                             "✓ Sẽ tham dự";

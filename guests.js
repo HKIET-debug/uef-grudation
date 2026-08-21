@@ -49,7 +49,7 @@ const GUESTS = {
         name: "Bạn Hậu Nguyễn"
     },
     "chi-hoe": {
-        name: "Chị Hoè"
+        name: "Chị Hoe"
     },
     "chi-ha": {
         name: "Chị Hà"
@@ -60,8 +60,8 @@ const GUESTS = {
     "ban-hung": {
         name: "Bạn Hùng"
     },
-    "ban-van": {
-        name: "Bạn Vân"
+    "cuong-van": {
+        name: "Bạn Cường Văn"
     },
     "anh-dam": {
         name: "Anh Đảm"
@@ -101,5 +101,23 @@ const GUESTS = {
     },
     "gia-hoang": {
         name: "Bạn Gia Hoàng"
+    },
+    "anh-iu": {
+        name: "Anh Kiệt của em"
+    },
+    "bac-duc": {
+        name: "Bác Đức"
+    },
+    "bao-phuc": {
+        name: "Bạn Bảo Phúc"
+    },
+    "hadi": {
+        name: "Bạn Hadi"
+    },
+    "ong-ba-noi": {
+        name: "Ông bà nội"
+    },
+    "ba-ngoai": {
+        name: "Bà ngoại và các bác"
     }
 };
